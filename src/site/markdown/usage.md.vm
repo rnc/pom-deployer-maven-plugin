@@ -1,0 +1,29 @@
+#*
+ * Copyright (C) 2017 Red Hat, Inc
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *#
+# Introduction
+
+This plugin is useful in the scenario where you have a generated XML file (typically a pom file) that you wish to deploy to a different `groupID:artifactID` than the main artifact. This use-case is typically used in conjunction with the [POM Manipulation Extension][] when it generates up a BOM for a project build. This BOM needs to be installed/deployed to a predictable location and not attached e.g. via the build-helper-plugin.
+
+# The add-pom mojo
+
+This mojo takes the specified XML file, together with the `groupID` and `artifactId`. It will **both** install and deploy the file. In order to support deployment, similar to the standard maven-deploy-plugin it also supports the concept of altDeploymentRepositories.
+
+The main options are:
+
+  * errorOnMissing: By default this plugin _will_ throw an error if the target file is missing.
+  * skip: By setting `add-pom.skip` the plugin can be skipped entirely.
+
+[POM Manipulation Extension]: https://github.com/release-engineering/pom-manipulation-ext

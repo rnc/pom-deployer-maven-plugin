@@ -1,5 +1,5 @@
-/*
- * Copyright (C) 2017 Red Hat, Inc. (ncross@redhat.com)
+/**
+ * Copyright (C) 2017 Red Hat, Inc
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.goots;
 
 import org.apache.maven.artifact.ArtifactUtils;
@@ -50,7 +49,10 @@ import static org.twdata.maven.mojoexecutor.MojoExecutor.name;
 import static org.twdata.maven.mojoexecutor.MojoExecutor.plugin;
 import static org.twdata.maven.mojoexecutor.MojoExecutor.version;
 
-@Mojo( name = "add-pom", defaultPhase = LifecyclePhase.INSTALL)
+/**
+ * Installs and deploys the specified XML (POM).
+ */
+@Mojo( name = "add-pom", defaultPhase = LifecyclePhase.INSTALL )
 public class AttachInstallDeployPOMMojo
     extends AbstractMojo
 {
@@ -136,6 +138,10 @@ public class AttachInstallDeployPOMMojo
 
 
     // Plugin requirements
+
+    /**
+     * Specify the target XML pom to deploy to the specified groupId/artifactID.
+     */
     @Parameter (required = true)
     private File pomName;
 
