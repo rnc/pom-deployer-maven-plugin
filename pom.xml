@@ -30,7 +30,7 @@
 
   <packaging>maven-plugin</packaging>
 
-  <version>1.1</version>
+  <version>1.2-SNAPSHOT</version>
 
   <name>pom-deployer-maven-plugin</name>
   <url>https://github.com/rnc/pom-deployer-maven-plugin</url>
@@ -58,7 +58,7 @@
     <connection>scm:git:http://github.com/rnc/pom-deployer-maven-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:rnc/pom-deployer-maven-plugin.git</developerConnection>
     <url>http://github.com/rnc/pom-deployer-maven-plugin</url>
-    <tag>pom-deployer-maven-plugin-1.1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
