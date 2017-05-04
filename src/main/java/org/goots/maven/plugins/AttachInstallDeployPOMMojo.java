@@ -236,7 +236,7 @@ public class AttachInstallDeployPOMMojo
                                         element( name( "version" ), mavenProject.getVersion() ),
                                         element( name( "packaging" ), "pom" ), element( name( "url" ), repo.getUrl() ),
                                         element( name( "repositoryId" ), repo.getId() ) ),
-                         executionEnvironment( tmpProject, mavenSession, pluginManager ) );
+                         executionEnvironment( mavenSession, pluginManager ) );
 
         }
         finally
